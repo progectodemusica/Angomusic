@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><link rel="stylesheet" type="text/css" href="estilos.css">
+    <head>
+<style>
+    body {
+        color: green; /* Troque "blue" pela cor que deseja */
+    }
+</style>
+</head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Mídia</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+</head>
+<body>   
+    
+<img src="imagems/Bandeira de Angola.jpeg" style="height: 50px; width: auto;">
+
+    
+    <header>
+    <h1>Bem-vindo ao Meu Blog de M҉u҉s҉i҉c҉a҉</h1>
+    <nav><style>
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .search-bar {
+        width: 300px;
+        border: 2px solid #4CAF50; /* Cor da borda */
+        border-radius: 25px; /* Bordas arredondadas */
+        padding: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+    .search-bar:focus {
+        outline: none; /* Remove a borda padrão ao focar */
+        border-color: #2E7D32; /* Cor da borda ao focar */}
+
+        
+        
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Músicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #searchInput {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #searchButton {
+            padding: 10px 15px;
+            background-color: green; /* Cor verde */
+            color: white; /* Texto branco */
+            border: none; /* Sem borda */
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+        }
+        #searchButton:hover {
+            background-color: darkgreen; /* Um tom mais escuro ao passar o mouse */
+        }
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Pesquisar músicas...">
+    <button id="searchButton" onclick="searchMusic()">Buscar</button>
+    <div id="results"></div>
+
+    <script>
+        function searchMusic() {
+            const query = document.getElementById('searchInput').value;
+
+            // Aqui você deve adicionar a URL do seu servidor
+            fetch(`URL_DO_SEU_SERVIDOR/search?query=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = ''; // Limpa resultados anteriores
+
+                    if (data.length > 0) {
+                        data.forEach(music => {
+                            const musicItem = document.createElement('div');
+                            musicItem.textContent = music.title; // Supondo que 'title' seja uma propriedade do objeto música
+                            resultsDiv.appendChild(musicItem);
+                        });
+                    } else {
+                        resultsDiv.textContent = 'Nenhuma música encontrada.';
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        }
+    </script>
+</body>
+</html>
+    
+
+
+                
+
+        
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Suspenso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove a margem padrão */
+            padding: 20px; /* Adiciona um pouco de espaço ao redor */
+        }
+        .menu {
+            position: relative;
+            display: inline-block; /* Faz com que o menu fique isolado */
+        }
+        .menu button {
+            color: white;
+            padding: 8px 10px; /* Botão menor */
+            text-decoration: none;
+            border: none;
+            background-color: green; /* Cor verde */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .menu-content a {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            text-decoration: none; /* Remove o sublinhado dos links */
+            display: block; /* Faz com que os links ocupem toda a largura do menu */
+        }
+        .menu-content a:hover {
+            background-color: #ddd; /* Efeito hover nos links do menu */
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <button onclick="toggleMenu()">Menu</button>
+    <div class="menu-content" id="myDropdown">
+        <a href="musica.html">Música</a>
+        <a href="memes.html">Vídeo</a>
+        
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Fecha o menu se o usuário clicar fora dele
+    window.onclick = function(event) {
+        if (!event.target.matches('.menu button')) {
+            var dropdowns = document.getElementsByClassName("menu-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+.show { display:block; } /* Mostra o menu quando necessário */
+</style>
+
+</body>
+</html>  
+        
+        
+        
+        
+        
+        
+    <main>
+        <!-- Conteúdo da página inicial -->
+        <h2>Página Inicial><img src="imagems/images.jpeg" style="height: 300px; width: auto;">
+       <h3>Aque você fica atualizado sobre as novas músicas dos artistas de ◦•●◉✿🅐︎🅝︎🅖︎🅞︎🅛︎🅐︎✿◉●•◦</h3> 
+       <img src="imagems/artistas de Angola.jpeg" style="height: 300px; width: auto;"><p>Promover Acortura do nosso P҉o҉v҉o҉ de A҉N҉G҉O҉L҉A҉</p>
+       <img src="imagems/leitores.jpeg" style="height: 300px; width: auto;"><p>[a̲̅][q̲̅][u̲̅][e̲̅] [v̲̅][c̲̅] [e̲̅][n̲̅][c̲̅][o̲̅][t̲̅][r̲̅][a̲̅] [a̲̅] [t̲̅][u̲̅][a̲̅] [m̲̅][u̲̅][s̲̅][i̲̅][c̲̅][a̲̅] [f̲̅][a̲̅][v̲̅][o̲̅][r̲̅][i̲̅][t̲̅][a̲̅] ｡✿‿✿｡</p>
+       <p5>Explore nosso conteúdo de música, vídeo e muito mais!</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Site de Mídia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
+
+    
+    
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Fundo</title>
+    <style>
+        body {
+            background-image: url('imagems/nigga.jpeg'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover; /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            margin: 0; /* Remove margens padrão */
+            height: 100vh; /* Altura total da tela */
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+
+    
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        .welcome-message {
+            display: none; /* Começa invisível */
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-message" id="welcome-message">Bem-vindo ao meu site!</div>
+
+    <script>
+        window.onload = function() {
+            const message = document.getElementById('welcome-message');
+            message.style.display = 'block'; // Mostra a mensagem
+
+            // Faz a mensagem desaparecer após 3 segundos
+            setTimeout(function() {
+                message.style.display = 'none';
+            }, 3000); // 3000 milissegundos = 3 segundos
+        };
+    </script>
+
+</body>
+</html>
+
+    
+    
+    
+    
+ 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: orange; /* Fundo laranja */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            color: #fff; /* Texto branco para contraste */
+            z-index: 9999; /* Para garantir que fique em cima de tudo */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-overlay" id="welcome-overlay">O҉ criador d҉o҉ blog KIMILSOM(｡♥‿♥｡)</div>
+
+    <script>
+        window.onload = function() {
+            const overlay = document.getElementById('welcome-overlay');
+
+            // Faz a tela desaparecer após 3 segundos
+            setTimeout(function() {
+                overlay.style.display = 'none';
+            }, 3000); // 3000 milissegundos = 3 segundos
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+```css
+body {
+    background-image: url('imagems/black.jpeg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+```
+
